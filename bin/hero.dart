@@ -8,22 +8,26 @@ class Hero {
   // global variable (전역 변수)
   static int money = 100; // 정적 변수
   String name;
-  int hp;
+  int _hp;
+
+  int get hp => _hp;
+
+  set hp(int value) {
+    if (value < 0) {
+      throw Exception('마이너스 안돼');
+    }
+
+    _hp = value;
+  }
+
   Sword? sword; // 칼이 있을 수도 있고 없을 수도 있다
 
   // 생성자 (생성하는 방법)
   Hero({
     this.name = '홍길동',
-    this.hp = 100,
+    int hp = 100,
     this.sword,
-  });
-
-  static void randomMoney() {
-    Hero hero = Hero();
-
-    hero.name = '홍길동';
-    hero.hp = 100;
-  }
+  }) : _hp = hp;
 
   // 클래스 안에 작성한 함수 = 메서드
   void attack() {
