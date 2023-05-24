@@ -21,6 +21,7 @@ class Cleric {
     }
   }
 
+  // sec 초만큼 기도하기
   int pray(int sec) {
     final prevMp = mp;
 
