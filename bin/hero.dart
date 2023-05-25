@@ -24,8 +24,8 @@ class Hero {
 
   // 생성자 (생성하는 방법)
   Hero({
-    this.name = '홍길동',
-    int hp = 100,
+    required this.name,
+    required int hp,
     this.sword,
   }) : _hp = hp;
 
@@ -38,7 +38,9 @@ class Hero {
     }
   }
 
-  void run() {}
+  void run() {
+    print('그냥 뛰었다');
+  }
 
   void sleep() {
     hp = 100;
