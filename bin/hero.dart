@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'sword.dart';
 
 class Hero {
@@ -24,8 +22,8 @@ class Hero {
 
   // 생성자 (생성하는 방법)
   Hero({
-    required this.name,
-    required int hp,
+    this.name = '홍길동',
+    int hp = 100,
     this.sword,
   }) : _hp = hp;
 
