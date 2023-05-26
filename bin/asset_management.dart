@@ -1,5 +1,5 @@
 class Book extends TangibleAsset {
-  String isbn;
+  final String isbn;
 
   Book({
     required super.name,
@@ -10,7 +10,7 @@ class Book extends TangibleAsset {
 }
 
 class Computer extends TangibleAsset {
-  String makerName;
+  final String makerName;
 
   Computer({
     required this.makerName,
@@ -21,7 +21,7 @@ class Computer extends TangibleAsset {
 }
 
 abstract class TangibleAsset extends Asset implements Thing {
-  String color;
+  final String color;
   double _weight = 0;
 
   TangibleAsset({
@@ -40,8 +40,8 @@ abstract class TangibleAsset extends Asset implements Thing {
 }
 
 abstract class Asset {
-  String name;
-  int price;
+  final String name;
+  final int price;
 
   Asset({
     required this.name,
