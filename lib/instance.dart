@@ -6,7 +6,7 @@ void main() {
   final h1 = Hero(name: '슈퍼맨', hp: 100);
   final h2 = Hero(name: '슈퍼맨', hp: 100);
 
-  print(h1.hashCode);
+  print(h1.toString());
   print(h2.hashCode);
 
   heroes.add(h1);

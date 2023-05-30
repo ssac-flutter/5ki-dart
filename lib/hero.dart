@@ -46,9 +46,9 @@ class Hero {
     // String interpolation
     print('$name 은 잠을 자고 회복했다');
   }
-  //
-  // @override
-  // int get hashCode => this.name.length;
+
+  @override
+  int get hashCode => this.name.length;
 
   @override
   bool operator ==(Object? other) {
