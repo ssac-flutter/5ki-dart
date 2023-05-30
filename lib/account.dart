@@ -1,4 +1,4 @@
-class Account {
+class Account extends Object {
   String owner;
   int balance;
 

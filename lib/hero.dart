@@ -46,4 +46,24 @@ class Hero {
     // String interpolation
     print('$name 은 잠을 자고 회복했다');
   }
+
+  @override
+  bool operator ==(Object? other) {
+    if (other == null) {
+      return false;
+    }
+
+    if (other is! Hero) {
+      return false;
+    }
+
+    Hero otherHero = other as Hero;
+
+    return this.name == otherHero.name;
+  }
+
+  @override
+  String toString() {
+    return 'Hero : {name: $name}';
+  }
 }
