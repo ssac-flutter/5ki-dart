@@ -10,11 +10,13 @@ void main() {
   // 방법 1.
   heroes.sort((a, b) => a.name.compareTo(b.name));
 
-  // 방법 2.
-  heroes.sort((a, b) => Comparable.compare(a.name, b.name));
+  print(heroes.reversed);
 
-  // 방법 3.
-  heroes.sort(compareHero);
+  // // 방법 2.
+  // heroes.sort((a, b) => Comparable.compare(a.name, b.name));
+  //
+  // // 방법 3.
+  // heroes.sort(compareHero);
 
   print(heroes);
 }
