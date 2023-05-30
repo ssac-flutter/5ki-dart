@@ -1,5 +1,5 @@
-import 'hero.dart';
-import 'slime.dart';
+import 'package:dart_basic/hero.dart';
+import 'package:dart_basic/slime.dart';
 
 void main() {
   final poisonSlime = PoisonSlime('A');

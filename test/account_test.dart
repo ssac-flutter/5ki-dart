@@ -1,6 +1,6 @@
 import 'package:test/test.dart';
 
-import '../bin/account.dart';
+import '../lib/account.dart';
 
 void main() {
   test('계좌 이체가 잘 동작해야 한다', () {

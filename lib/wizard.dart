@@ -1,6 +1,5 @@
-import 'dart:math';
+import 'package:dart_basic/hero.dart';
 
-import 'hero.dart';
 
 class Wizard {
   String name;
