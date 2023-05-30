@@ -1,4 +1,4 @@
-class Sword {
+class Sword implements Comparable<Sword> {
   String name;
   int damage;
 
@@ -20,5 +20,11 @@ class Sword {
   @override
   String toString() {
     return 'Sword{name: $name, damage: $damage}';
+  }
+
+  // Comparable.sort(sword1, sword2)에 대응
+  @override
+  int compareTo(Sword other) {
+    return name.compareTo(other.name);
   }
 }
