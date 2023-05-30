@@ -1,4 +1,3 @@
-
 import 'package:dart_basic/sword.dart';
 
 class Hero {
@@ -28,6 +27,21 @@ class Hero {
     this.sword,
   }) : _hp = hp;
 
+  factory Hero.clone(Hero hero) {
+    return Hero(
+      name: hero.name,
+      hp: hero.hp,
+      sword: hero.sword,
+    );
+  }
+
+  Hero copyWith({String? name, int? hp}) {
+    return Hero(
+      name: name ?? this.name,
+      hp: hp ?? this.hp,
+    );
+  }
+
   // 클래스 안에 작성한 함수 = 메서드
   void attack() {
     if (sword == null) {
@@ -48,25 +62,7 @@ class Hero {
   }
 
   @override
-  int get hashCode => this.name.length;
-
-  @override
-  bool operator ==(Object? other) {
-    if (other == null) {
-      return false;
-    }
-
-    if (other is! Hero) {
-      return false;
-    }
-
-    Hero otherHero = other as Hero;
-
-    return this.name == otherHero.name;
-  }
-
-  @override
   String toString() {
-    return 'Hero : {name: $name}';
+    return 'Hero{name: $name, _hp: $_hp, sword: $sword}';
   }
 }
