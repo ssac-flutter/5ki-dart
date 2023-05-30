@@ -1,16 +1,17 @@
 import 'package:dart_basic/hero.dart';
 
 void main() {
-  final List<Hero> heroes = [];
+  final heroes = <Hero>{};
 
   final h1 = Hero(name: '슈퍼맨', hp: 100);
   final h2 = Hero(name: '슈퍼맨', hp: 100);
 
+  print(h1.hashCode);
+  print(h2.hashCode);
+
   heroes.add(h1);
   print(heroes.length);
 
-  heroes.add(h2);
+  heroes.remove(h2);
   print(heroes.length);
-
-  print(h1 == h2);
 }
