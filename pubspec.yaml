@@ -8,6 +8,7 @@ environment:
 
 # Add regular dependencies here.
 dependencies:
+  http: ^1.0.0
   intl: ^0.18.1
   string_validator: ^1.0.0
   # path: ^1.8.0
