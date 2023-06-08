@@ -1,4 +1,10 @@
+
+import 'dart:io';
+
 void main() async {
+  final file = File('lib/async/sample.csv');
+  final exists = await file.exists();
+
   Stopwatch stopwatch = Stopwatch()..start();
 
   getInt1();
