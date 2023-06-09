@@ -1,6 +1,6 @@
-import 'package:dart_basic/network/mask/dto/mask_info_dto.dart';
-import 'package:dart_basic/network/mask/mask_api.dart';
-import 'package:dart_basic/network/mask/model/mask_info_result.dart';
+import 'package:dart_basic/network/mask/data_source/mask_api.dart';
+import 'package:dart_basic/network/mask/dto/mask_dto.dart';
+import 'package:dart_basic/network/mask/model/mask.dart';
 import 'mapper/mask_mapper.dart';
 
 // Api
@@ -13,10 +13,15 @@ import 'mapper/mask_mapper.dart';
 
 // 로직 (main)
 void main() async {
+  // Api 통신
   final api = MaskApi();
 
-  final MaskInfoDto dto = await api.getMaskInfoResult();
-  final MaskInfoResult model = dto.toMaskInfoResult();
+  // Json 을 Dto 로
+  final MaskDto dto = await api.getMaskInfoResult();
 
-  print(model.stores);
+  // Dto에서 필요한 내용을 mapper를 통해 모델 클래스로 변환
+  final List<Mask> masks = dto.stores?.map((e) => e.toMask()).toList() ?? [];
+
+  // 활용
+  print(masks.toString());
 }
