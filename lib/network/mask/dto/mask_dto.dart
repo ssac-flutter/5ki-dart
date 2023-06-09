@@ -1,10 +1,10 @@
-class MaskInfoDto {
-  MaskInfoDto({
+class MaskDto {
+  MaskDto({
     this.count,
     this.stores,
   });
 
-  MaskInfoDto.fromJson(dynamic json) {
+  MaskDto.fromJson(dynamic json) {
     count = json['count'];
     if (json['stores'] != null) {
       stores = [];
