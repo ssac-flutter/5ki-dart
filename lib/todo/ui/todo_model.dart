@@ -4,10 +4,10 @@ import 'dart:math';
 import 'package:dart_basic/todo/data/model/todo.dart';
 import 'package:dart_basic/todo/data/repository/todo_repository.dart';
 
-class TodoViewModel {
+class TodoModel {
   final TodoRepository _todoRepository;
 
-  TodoViewModel(this._todoRepository);
+  TodoModel(this._todoRepository);
 
   String? input() {
     return stdin.readLineSync();
