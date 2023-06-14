@@ -4,13 +4,12 @@ part 'user.g.dart';
 
 @JsonSerializable(explicitToJson: true)
 class User {
-  int id;
+  int id = -1;
   String name;
   String phone;
   String address;
 
   User({
-    required this.id,
     required this.name,
     this.phone = '',
     this.address = '',

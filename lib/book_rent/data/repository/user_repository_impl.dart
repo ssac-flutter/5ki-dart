@@ -3,9 +3,10 @@ import 'user_repository.dart';
 
 class UserRepositoryImpl implements UserRepository {
   final List<User> _users = [];
+  var _lastId = 0;
 
   @override
-  User findById(int id) {
+  User? findById(int id) {
     return _users.firstWhere((element) => element.id == id);
   }
 
@@ -19,6 +20,7 @@ class UserRepositoryImpl implements UserRepository {
     final index = _users.indexWhere((element) => element.id == user.id);
 
     if (index == -1) {
+      user.id = ++_lastId;
       _users.add(user);
     } else {
       _users[index] = user;

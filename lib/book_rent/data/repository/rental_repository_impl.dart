@@ -4,9 +4,10 @@ import 'rental_repository.dart';
 class RentalRepositoryImpl implements RentalRepository {
 
   final List<Rental> _rentals = [];
+  var _lastId = 0;
 
   @override
-  Rental findById(int id) {
+  Rental? findById(int id) {
     return _rentals.firstWhere((e) => e.id == id);
   }
 
@@ -20,6 +21,7 @@ class RentalRepositoryImpl implements RentalRepository {
     final index = _rentals.indexWhere((e) => e.id == rental.id);
 
     if (index == -1) {
+      rental.id = ++_lastId;
       _rentals.add(rental);
     } else {
       _rentals[index] = rental;

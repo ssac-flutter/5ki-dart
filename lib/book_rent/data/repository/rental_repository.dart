@@ -1,7 +1,7 @@
 import '../model/rental.dart';
 
 abstract interface class RentalRepository {
-  Rental findById(int id);
+  Rental? findById(int id);
 
   List<Rental> findAll();
 

@@ -1,7 +1,7 @@
 import '../model/book.dart';
 
 abstract interface class BookRepository {
-  Book findById(int id);
+  Book? findById(int id);
 
   List<Book> findAll();
 

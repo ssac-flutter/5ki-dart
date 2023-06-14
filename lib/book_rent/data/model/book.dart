@@ -4,7 +4,7 @@ part 'book.g.dart';
 
 @JsonSerializable(explicitToJson: true)
 class Book {
-  int id;
+  int id = -1;
   String title;
   String author;
   String publisher;
@@ -12,7 +12,6 @@ class Book {
   String description;
 
   Book({
-    required this.id,
     required this.title,
     this.author = '',
     this.publisher = '',

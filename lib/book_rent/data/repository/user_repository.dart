@@ -1,7 +1,7 @@
 import '../model/user.dart';
 
 abstract interface class UserRepository {
-  User findById(int id);
+  User? findById(int id);
 
   List<User> findAll();
 
