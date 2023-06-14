@@ -1,4 +1,4 @@
-import 'package:dart_basic/todo/ui/todo_view_model.dart';
+import 'package:dart_basic/todo/ui/todo_model.dart';
 
 class TodoScreen {
   final TodoViewModel viewModel;
