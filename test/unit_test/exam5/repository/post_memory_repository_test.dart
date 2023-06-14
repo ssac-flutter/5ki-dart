@@ -1,20 +1,42 @@
+import 'dart:io';
+
 import 'package:dart_basic/unit_test/exam5/model/post.dart';
+import 'package:dart_basic/unit_test/exam5/repository/data_storage.dart';
+import 'package:dart_basic/unit_test/exam5/repository/post_file_repository_impl.dart';
 import 'package:dart_basic/unit_test/exam5/repository/post_memory_repository_impl.dart';
 import 'package:dart_basic/unit_test/exam5/repository/post_repository.dart';
 import 'package:test/test.dart';
 
+class MockDataStorage implements DataStorage<Post> {
+  @override
+  Future<List<Post>> load() async {
+    return [
+      Post(0, 'test1', 'test1'),
+      Post(1, 'test2', 'test2')
+    ];
+  }
+
+  @override
+  Future<void> save(List<Post> posts) async {
+
+  }
+}
+
 void main() {
-  PostRepository _repository = PostMemoryRepositoryImpl();
+  PostRepository _repository =
+      PostFileRepositoryImpl(MockDataStorage());
+      // PostFileRepositoryImpl(FileDataStorage(File('test.json')));
+
 
   setUp(() async {
-    _repository.addPost(Post(0, 'test1', 'test1'));
-    _repository.addPost(Post(1, 'test2', 'test2'));
+    await _repository.addPost(Post(0, 'test1', 'test1'));
+    await _repository.addPost(Post(1, 'test2', 'test2'));
   });
 
   tearDown(() async {
-    _repository = PostMemoryRepositoryImpl();
+    // file 삭제
+    _repository = PostFileRepositoryImpl(MockDataStorage());
   });
-
 
   group('PostRepository', () {
     test('getPosts()', () async {
