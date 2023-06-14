@@ -7,6 +7,7 @@ part 'rental.g.dart';
 
 @JsonSerializable(explicitToJson: true)
 class Rental {
+  int id;
   Book book;
   User user;
   DateTime startDate;
@@ -15,6 +16,7 @@ class Rental {
   bool isExtended;
 
   Rental({
+    required this.id,
     required this.book,
     required this.user,
     required this.startDate,
