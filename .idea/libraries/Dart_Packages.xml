@@ -75,7 +75,7 @@
         <entry key="build_runner_core">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/build_runner_core-7.2.8/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/build_runner_core-7.2.10/lib" />
             </list>
           </value>
         </entry>
@@ -250,7 +250,7 @@
         <entry key="logging">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/logging-1.1.1/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/logging-1.2.0/lib" />
             </list>
           </value>
         </entry>
@@ -505,7 +505,7 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/build_daemon-4.0.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/build_resolvers-2.2.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/build_runner-2.4.5/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/build_runner_core-7.2.8/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/build_runner_core-7.2.10/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/built_collection-5.1.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/built_value-8.6.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/checked_yaml-2.0.3/lib" />
@@ -530,7 +530,7 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/json_annotation-4.8.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/json_serializable-6.7.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/lints-2.1.0/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/logging-1.1.1/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/logging-1.2.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/matcher-0.12.16/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/meta-1.9.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/mime-1.0.4/lib" />
